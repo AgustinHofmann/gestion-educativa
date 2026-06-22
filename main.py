@@ -3,23 +3,23 @@
 
 
 class Profesor:
-    def __init__(self, nombre, apellido, dni, especialidad, salario):
+    def __init__(self, nombre, apellido, dni, especialidad, antiguedad):
         self.nombre = nombre
         self.apellido = apellido
         self.dni = dni
         self.especialidad = especialidad
-        self.salario = salario
+        self.antiguedad = antiguedad      # años de experiencia
 
     def nombre_completo(self):
         return f"{self.nombre} {self.apellido}"
 
-    def dar_aumento(self, porcentaje):
-        self.salario += self.salario * porcentaje / 100
-        return self.salario
+    def cumplir_anio(self):
+        self.antiguedad += 1
+        return self.antiguedad
 
     def mostrar_info(self):
         print(f"Profesor: {self.nombre_completo()} | DNI: {self.dni} | "
-              f"Especialidad: {self.especialidad} | Salario: ${self.salario:.2f}")
+              f"Especialidad: {self.especialidad} | Antigüedad: {self.antiguedad} años")
 
 
 class Estudiante:
@@ -93,8 +93,8 @@ def main():
         apellido = input("  Apellido: ")
         dni = input("  DNI: ")
         especialidad = input("  Especialidad: ")
-        salario = pedir_numero("  Salario: ")
-        profesores.append(Profesor(nombre, apellido, dni, especialidad, salario))
+        antiguedad = int(pedir_numero("  Antigüedad (años): "))
+        profesores.append(Profesor(nombre, apellido, dni, especialidad, antiguedad))
 
     print("\n=== CARGA DE ESTUDIANTES ===")
     cant = int(pedir_numero("¿Cuántos estudiantes querés cargar? "))

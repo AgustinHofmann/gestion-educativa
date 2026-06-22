@@ -6,7 +6,7 @@ Programa en Python con **tres clases relacionadas** del ámbito educativo. Traba
 
 | Clase | Atributos (5+) | Métodos (3+) |
 |-------|----------------|--------------|
-| `Profesor` | nombre, apellido, dni, especialidad, salario | `nombre_completo()`, `dar_aumento()`, `mostrar_info()` |
+| `Profesor` | nombre, apellido, dni, especialidad, antiguedad | `nombre_completo()`, `cumplir_anio()`, `mostrar_info()` |
 | `Estudiante` | nombre, apellido, legajo, edad, carrera, notas | `agregar_nota()`, `promedio()`, `mostrar_info()` |
 | `Materia` | nombre, codigo, creditos, profesor, cupo, estudiantes | `inscribir_estudiante()`, `cantidad_inscriptos()`, `mostrar_info()` |
 
